@@ -16,9 +16,13 @@ import Pewarisan_DAO.LaporanPanenDAO;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.Scanner;
+import gui.frameUtama;
 
 public class Main {
     public static void main(String[] args) {
+        
+        new frameUtama().setVisible(true);
+        
         try (Scanner scanner = new Scanner(System.in)) {
             AlatBahanDAO alatBahanDAO = new AlatBahanDAO();
             LaporanPanenDAO laporanPanenDAO = new LaporanPanenDAO();
@@ -275,7 +279,7 @@ public class Main {
                 // Create LaporanPanen
                 System.out.println("Masukkan ID LaporanPanen:");
                 int id = scanner.nextInt();
-                scanner.nextLine();  // Clear the buff2er
+                scanner.nextLine();  // Clear the buffer
 
                 System.out.println("Masukkan nama:");
                 String nama = scanner.nextLine();
